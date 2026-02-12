@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الطعام - مطعم عرش المذاق</title>
+    <link rel="stylesheet" href="تابع خدمه التوصيل.css">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">مطعم عرش المذاق</div>
+        <nav>
+            <ul>
+                <li><a href="الصفحه الرئيسيه.html">الرئيسية</a></li>
+                <li><a href="القائمه.html">القائمة</a></li>
+                <li><a href="اراء العملاء.html">آراء العملاء</a></li>
+                <li><a href="التواصل.html">تواصل</a></li>
+                <li><a href="خدمه التوصيل.html">خدمة التوصيل</a></li>
+                <li><a href="تسجيل الدخول.html" class="login-btn">تسجيل الدخول</a></li>
+                <li><a href="السله.html" class="cart-btn">🛒 السلة</a></li>
+            </ul>
+        </nav>
+    </header> <br>
+
+       <!-- نموذج التوصيل -->
+    <section id="delivery" >
+        <h2>خدمة التوصيل</h2>
+
+        <div class="delivery-summary">
+            <p>المبلغ الإجمالي من السلة: <strong id="total">0</strong></p>
+        </div>
+ 
+        <form id="delivery-form">
+            <input type="text" name="name" placeholder="الاسم الكامل" required maxlength="50">
+            <input type="text" name="address" placeholder="العنوان" required maxlength="100">
+            <input type="tel" name="phone" placeholder="رقم الهاتف" required maxlength="15">
+            <select name="payment" required>
+                <option value="">اختر وسيلة الدفع</option>
+                <option value="cash">نقدًا عند الاستلام</option>
+                <option value="card">بطاقة الائتمان</option>
+            </select>
+            <button type="submit" class="checkout-btn">إرسال الطلب</button>
+         </form> 
+
+    </section>
+      <!-- زر العودة للصفحة الرئيسية -->
+    <a href="الصفحه الرئيسيه.html" class="back-home">🏠 العودة للرئيسية</a>
+
+    <!-- الفوتر -->
+    <footer>
+          <p>© 2026 مطعم عرش المذاق - جميع الحقوق محفوظة</p>
+         <p>📍 صنعاء - اليمن | ☎ 777777777</p>
+    </footer>
+     
+      <script>
+        // عرض المبلغ الإجمالي من السلة
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let total = cart.reduce((sum, item) => sum + item.price, 0);
+        document.getElementById("total").innerText = total + "$";
+
+        // عند إرسال الطلب
+        document.getElementById("delivery-form").addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("تم استلام طلبك بنجاح!\nالمبلغ: " + total + "$");
+            localStorage.removeItem("cart"); // تنظيف السلة بعد الطلب
+            window.location.href = "الصفحه الرئيسيه.html"; // العودة للرئيسية
+        });
+    </script>
+</body>
+</html>

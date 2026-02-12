@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+    <link rel="stylesheet" href="تابع الصفحه الرئيسيه.css">
+    <title>مطعم عرش المذاق</title>
+    
+</head>
+
+<body>
+    <div id="welcome-popup">
+    <div class="popup-box">
+        <h2>مرحباً بك 👑</h2>
+        <p>كيف تحب تدخل موقعنا؟</p>
+        <button onclick="goLogin()">تسجيل الدخول</button>
+        <button onclick="enterGuest()">الدخول كزائر</button>
+    </div>
+  </div>
+
+
+    <!-- الهيدر -->
+    <header>
+        <div class="name">مطعم عرش المذاق</div>
+        <nav>
+            <ul>
+               <li><a href="الصفحه الرئيسيه.html">الرئيسية</a></li>
+                <li><a href="القائمه.html">القائمة</a></li>
+                <li><a href="اراء العملاء.html">آراء العملاء</a></li>
+                <li><a href="التواصل.html" class="active">تواصل</a></li>
+                <li><a href="خدمه التوصيل.html">خدمة التوصيل</a></li>
+                <li><a href="تسجيل الدخول.html">تسجيل الدخول</a></li>
+                <li><a href="السله.html">🛒 السلة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم الترحيب -->
+    <section id="home" class="hero">
+        <div class="welcome-image">
+    
+        <img src="am12.png" alt="الأسطورة" class="logo-img">
+           
+            <div class="hero-content" dir="rtl">
+                <h1>أهلاً بكم في مطعم عرش المذاق</h1>
+                <p>المذاق الذي يليق بالملوك</p>
+                <a href="القائمه.html" class="btn-menu">اكتشف القائمة</a>
+            </div>
+        </div>
+    </section>
+
+       <section id="menu" dir="rtl" >
+       
+       <div class="menu-container">
+            <!-- صنف 1 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/بيتزا.jpeg" alt="بيتزا">
+                <h3>بيتزا</h3>
+                <p>بيتزا ساخنة مع مكونات طازجة.</p>
+                 <h4>2000 ريال</h4>
+                <button onclick="addToCart('بيتزا', 2000, 'صور الوجبات/بيتزا.jpeg')">
+                     أضف للسلة
+                 </button>
+            </div>
+
+            <!-- صنف 2 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/برجر .jpeg" alt="برجر">
+                <h3>برجر</h3>
+                <p>برجر لحم طازج مع الجبن والخضار.</p>
+                <h4>1800 ريال</h4>
+                <button onclick="addToCart('برجر', 1800, 'صور الوجبات/برجر .jpeg')">أضف للسلة</button>
+            </div>
+
+            <!-- صنف 3 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/برياني.jpeg" alt="برياني">
+                <h3>برياني</h3>
+                <p>برياني.</p>
+                <h4> النفر: 1000 ريال</h4>
+                <button onclick="addToCart('برياني', 1000, 'صور الوجبات/برياني.jpeg')">أضف للسلة</button>
+            </div>
+             <!-- صنف 3 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/رز مع دجاج.jpeg" alt="رز بالدجاج">
+                <h3>رز بالدجاج</h3>
+                <p>رز بالدجاج.</p>
+                <h4> النفر: 1500 ريال</h4>
+                <button onclick="addToCart('رز بالدجاج', 1500, 'صور الوجبات/رز مع دجاج.jpeg')">أضف للسلة</button>
+            </div>
+        </div>
+         
+    </section>
+
+       <a href="القائمه.html" class="Menu"> اكتشف القائمة</a> <br> <br>
+
+    <!-- الفوتر -->
+    <footer>
+          <p>© 2026 مطعم عرش المذاق - جميع الحقوق محفوظة</p>
+          <p>📍 صنعاء - اليمن | ☎ 777777777</p>
+    </footer>
+
+    <script>
+        function goLogin() {
+            window.location.href = "تسجيل الدخول.html";
+        }
+
+        function enterGuest() {
+            document.getElementById("welcome-popup").style.display = "none";
+        }
+</script>
+
+
+</body>
+</html>

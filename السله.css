@@ -1,0 +1,188 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cairo", sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: #e5e7eb;
+    line-height: 1.8;
+}
+
+/* الهيدر */
+header {
+    background: rgba(2,6,23,0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: 3px solid #d4af37;
+}
+
+/* السلة */
+#cart {
+    padding: 60px;
+    text-align: center;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column; /* عمودي*/
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ارسال الطلبات من القائمه*/
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(145deg, #020617, #111827);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: transform 0.3s;
+}
+
+.cart-item:hover {
+    transform: translateY(-5px);
+}
+
+.cart-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* حذف محتوى السله*/
+.cart-details {
+    flex: 1;
+    margin-left: 20px;
+    text-align: left;
+}
+
+.cart-details h3 {
+    margin: 0 0 8px 0;
+    color: #d4af37;
+}
+
+.cart-details span {
+    font-weight: bold;
+    color: #b8962e;
+}
+
+.cart-details input[type="number"] {
+    margin-top: 8px;
+    padding: 5px;
+    width: 60px;
+    border-radius: 6px;
+    border: 1px solid rgba(212,175,55,0.3);
+}
+
+/* ملخص السلة */
+.cart-summary {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.cart-summary p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* زر العودة للرئيسية */
+.back-home {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(145deg, #d4af37, #b8962e);
+    color: #020617;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(228, 148, 1, 0.5);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.back-home:hover {
+    background: #f1c40f;
+    color: #020617;
+}
+ /* زر الحذف التابع لنفس الوجبه */
+.remove-btn {
+    background: #f1c40f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.remove-btn:hover {
+    background: #dc2626;
+}
+
+/* تفريغ السله زر*/
+.clear-cart {
+    background: linear-gradient(145deg, #d4af37, #b8962e);
+    color: #020617;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; 
+    transition: 0.3s;
+}
+
+.clear-cart:hover {
+    background: #f1c40f;
+}
+
+/* الفوتر */
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 15px;
+    color: #d4af37;
+    border-top: 1px solid rgba(212,175,55,0.2);
+}

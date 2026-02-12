@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة الطعام - مطعم عرش المذاق</title>
+    <link rel="stylesheet" href="تابع القائمه.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">مطعم عرش المذاق</div>
+        <nav>
+            <ul>
+                <li><a href="الصفحه الرئيسيه.html">الرئيسية</a></li>
+                <li><a href="القائمه.html">القائمة</a></li>
+                <li><a href="اراء العملاء.html">آراء العملاء</a></li>
+                <li><a href="التواصل.html" class="active">تواصل</a></li>
+                <li><a href="خدمه التوصيل.html">خدمة التوصيل</a></li>
+                <li><a href="تسجيل الدخول.html">تسجيل الدخول</a></li>
+                <li><a href="السله.html">🛒 السلة</a></li>
+            </ul>
+        </nav>
+    </header> <br>
+      <div class="name" dir="rtl">
+      <h2>
+            <nav>
+                <ul>
+                    <li><a href="#menu"> الماكولات الرئيسية</a></li>
+                    <li><a href="المشروبات تابع القائمه.html"> المشروبات</a></li>
+                    <li><a href="الحلويات تابع القائمه.html"> حلويات</a></li>
+                </ul>
+            </nav>
+        </h2>
+        </div>
+    <!-- قسم المنيو -->
+    <section id="menu" dir="rtl" >
+       
+        <div class="menu-container">
+            <!-- صنف 1 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/بيتزا.jpeg" alt="بيتزا">
+                <h3>بيتزا</h3>
+                <p>بيتزا ساخنة مع مكونات طازجة.</p>
+                 <h4>2000 ريال</h4>
+                <button onclick="addToCart('بيتزا', 2000, 'صور الوجبات/بيتزا.jpeg')">
+                     أضف للسلة
+                 </button>
+            </div>
+
+            <!-- صنف 2 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/برجر .jpeg" alt="برجر">
+                <h3>برجر</h3>
+                <p>برجر لحم طازج مع الجبن والخضار.</p>
+                <h4>1800 ريال</h4>
+                <button onclick="addToCart('برجر', 1800, 'صور الوجبات/برجر .jpeg')">أضف للسلة</button>
+            </div>
+
+            <!-- صنف 3 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/برياني.jpeg" alt="برياني">
+                <h3>برياني</h3>
+                <p>برياني.</p>
+                <h4> النفر: 1000 ريال</h4>
+                <button onclick="addToCart('برياني', 1000, 'صور الوجبات/برياني.jpeg')">أضف للسلة</button>
+            </div>
+             <!-- صنف 3 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/رز مع دجاج.jpeg" alt="رز بالدجاج">
+                <h3>رز بالدجاج</h3>
+                <p>رز بالدجاج.</p>
+                <h4> النفر: 1500 ريال</h4>
+                <button onclick="addToCart('رز بالدجاج', 1500, 'صور الوجبات/رز مع دجاج.jpeg')">أضف للسلة</button>
+            </div>
+             <!-- صنف 3 -->
+            <div class="menu-item">
+                <img src="صور الوجبات/رز.jpeg" alt="رز">
+                <h3>رز</h3>
+                <p>رز.</p>
+                <h4> النفر: 800 ريال</h4>
+                <button onclick="addToCart('رز', 800, 'صور الوجبات/رز.jpeg')">أضف للسلة</button>
+            </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/شوارما باللحم.jpg" alt="شوارما باللحم">
+                <h3>شوارما دجاج</h3>
+                <p>شوارما دجاج.</p>
+                <h4> 700 ريال</h4>
+                <button onclick="addToCart('شوارما دجاج', 700, 'صور الوجبات/شوارما باللحم.jpg')">أضف للسلة</button>
+            </div>
+
+               <div class="menu-item">
+                <img src="صور الوجبات/شوارما لحم.jpg" alt="شوارما لحم">
+                <h3>شوارما لحم</h3>
+                <p>شوارما لحم.</p>
+                 <h4> 1400 ريال</h4>
+                <button onclick="addToCart('شوارما لحم', 1400, 'صور الوجبات/شوارما لحم.jpg')">أضف للسلة</button>
+             </div>
+             
+             <div class="menu-item">
+                <img src="صور الوجبات/فاهيتا.webp" alt="فاهيتا">
+                <h3>فاهيتا</h3>
+                <p>فاهيتا.</p>
+                 <h4> 600 ريال</h4>
+                <button onclick="addToCart('فاهيتا', 600, 'صور الوجبات/فاهيتا.webp')">أضف للسلة</button>
+             </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/بروست جمبري.jfif" alt="بروست جمبري">
+                <h3>بروست جمبري</h3>
+                <p>بروست جمبري.</p>
+                 <h4>2500 ريال</h4>
+                <button onclick="addToCart('بروست جمبري', 2500, 'صور الوجبات/بروست جمبري.jfif')">أضف للسلة</button>
+             </div>
+
+              <div class="menu-item">
+                <img src="صور الوجبات/مندي لحم.jpg" alt="مندي لحم">
+                <h3>   مندي لحم </h3>
+                <p>رز مندي لحم.</p>
+               <h4> النفر: 4000 ريال</h4>
+                <button onclick="addToCart('مندي لحم', 4000, 'صور الوجبات/مندي لحم.jpg')">أضف للسلة</button>
+             </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/لحم.jpeg" alt="لحم">
+                <h3>لحم</h3>
+                <p>لحم.</p>
+                <h4>6000 ريال</h4>
+                <button onclick="addToCart('لحم', 6000, 'صور الوجبات/لحم.jpeg')">أضف للسلة</button>
+            </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/كبده عجل.jpg" alt="كبده عجل">
+                <h3>كبده عجل</h3>
+                <p>كبده عجل.</p>
+                <h4> 2600 ريال</h4>
+                <button onclick="addToCart('كبده عجل', 2600, 'صور الوجبات/كبده عجل.jpg')">أضف للسلة</button>
+            </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/حمص.jpg" alt="حمص">
+                <h3>حمص</h3>
+                <p>حمص.</p>
+                <h4> 500 ريال</h4>
+                <button onclick="addToCart('حمص', 500, 'صور الوجبات/حمص.jpg')">أضف للسلة</button>
+            </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/بنت الصحن.jpg" alt="بنت الصحن">
+                <h3>بنت الصحن</h3>
+                <p>بنت الصحن.</p>
+                <h4>1000 ريال</h4>
+                <button onclick="addToCart('بنت الصحن', 1000, 'صور الوجبات/بنت الصحن.jpg')">أضف للسلة</button>
+            </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/معصوبه.webp" alt="معصوبه">
+                <h3>معصوبه</h3>
+                <p>معصوبه.</p>
+               <h4>1200 ريال</h4>
+                <button onclick="addToCart('معصوبه', 1200, 'صور الوجبات/معصوبه.webp')">أضف للسلة</button>
+            </div>
+
+             <div class="menu-item">
+                <img src="صور الوجبات/رز مع لحم.avif" alt="رز مع لحم">
+                <h3>رز مع لحم</h3>
+                <p>رز مع لحم.</p>
+                <h4> النفر: 6800 ريال</h4>
+                <button onclick="addToCart('رز مع لحم', 6800, 'صور الوجبات/رز مع لحم.avif')">أضف للسلة</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- زر العودة للصفحة الرئيسية -->
+    <a href="الصفحه الرئيسيه.html" class="back-home">🏠 العودة للرئيسية</a>
+
+    <!-- الفوتر -->
+    <footer>
+         <p>© 2026 مطعم عرش المذاق - جميع الحقوق محفوظة</p>
+         <p>📍 صنعاء - اليمن | ☎ 777777777</p>
+    </footer>
+
+    <!-- JS لإضافة الأصناف للسلة -->
+    <script>
+        function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name, price, image });
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("تمت الإضافة للسلة");
+}
+</script>
+
+
+
+</body>
+</html>

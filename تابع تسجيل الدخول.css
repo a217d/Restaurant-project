@@ -1,0 +1,151 @@
+
+/* إعدادات عامة لكل الصفحة */
+* {
+    margin: 0;              /* إزالة الهوامش الافتراضية */
+    padding: 0;             /* إزالة الحشو الافتراضي */
+    box-sizing: border-box; /* حساب العرض مع الحدود */
+    font-family: "Cairo", sans-serif; /* الخط المستخدم */
+}
+
+/* إعدادات جسم الصفحة */
+body {
+    background: radial-gradient(circle at top, #1e293b, #020617); /* خلفية فخمة */
+    color: #e5e7eb;        /* لون النص */
+    line-height: 1.8;      /* تباعد الأسطر */
+}
+
+
+/* الهيدر (الشريط العلوي) */
+header {
+    background: rgba(2,6,23,0.95); /* لون داكن شفاف */
+    display: flex;                 /* ترتيب العناصر أفقيًا */
+    justify-content: space-between;/* توزيع المحتوى */
+    align-items: center;           /* توسيط عمودي */
+    padding: 18px 60px;            /* مسافة داخلية */
+    border-bottom: 1px solid rgba(212,175,55,0.2); /* خط سفلي */
+}
+
+/* اسم المطعم في الهيدر */
+header .name {
+    font-size: 24px;       /* حجم الخط */
+    font-weight: bold;     /* خط عريض */
+    color: #d4af37;        /* لون ذهبي */
+}
+
+/* قائمة التنقل */
+nav ul {
+    list-style: none;      /* إزالة النقاط */
+    display: flex;         /* عرض أفقي */
+}
+
+/* عناصر القائمة */
+nav ul li {
+    margin-left: 25px;     /* مسافة بين الروابط */
+}
+
+/* روابط التنقل */
+nav ul li a {
+    text-decoration: none; /* إزالة الخط */
+    color: #e5e7eb;        /* لون النص */
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;      /* حركة ناعمة */
+}
+
+/* تأثير المرور على الرابط */
+nav ul li a:hover {
+    color: #d4af37;        /* لون ذهبي */
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: 3px solid #d4af37;
+}
+
+/* قسم تسجيل الدخول */
+.login-section {
+    display: flex;
+    justify-content: center; /* توسيط أفقي */
+    align-items: center;     /* توسيط عمودي */
+    min-height: calc(100vh - 200px); /* تحت الهيدر والفوتر */
+}
+
+/* بطاقة تسجيل الدخول */
+.login-card {
+    background: linear-gradient(145deg, #020617, #111827); /* خلفية البطاقة */
+    padding: 80px 40px;      /* مسافة داخلية */
+    margin: 5%;
+    border-radius: 20px;     /* زوايا دائرية */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7); /* ظل */
+    width: 350px;
+    text-align: center;
+}
+
+/* عنوان تسجيل الدخول */
+.login-card h2 {
+    color: #d4af37;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* مجموعة الإدخال */
+.input-group {
+    margin-bottom: 20px; /* مسافة بين الحقول */
+}
+
+/* حقول الإدخال */
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid rgba(212,175,55,0.3);
+    background: #020617;
+    color: #e5e7eb;
+    font-size: 16px;
+}
+
+/* زر تسجيل الدخول */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #d4af37, #b8962e);
+    color: #020617;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* تأثير المرور على الزر */
+button:hover {
+    background: #f1c40f;
+    color: #020617;
+}
+
+/* زر العودة للرئيسية */
+.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(145deg, #d4af37, #b8962e);
+    color: #020617;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* تأثير المرور على زر العودة */
+.back-home:hover {
+    background: #f1c40f;
+    color: #020617;
+}
+
+/* الفوتر */
+footer {
+    background: #020617;    /* لون داكن */
+    text-align: center;     /* توسيط النص */
+    padding: 15px;
+    color: #d4af37;         /* لون ذهبي */
+    border-top: 1px solid rgba(212,175,55,0.2);
+}

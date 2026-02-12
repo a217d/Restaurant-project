@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="السله.css"> <!-- رابط CSS الخارجي -->
+
+    <title>🛒 سلة التسوق - سلسلة الأسطورة</title>
+</head>
+<body>
+
+    <!-- الهيدر + Navbar -->
+    <header>
+          <div class="logo">مطعم عرش المذاق</div>
+        <nav>
+            <ul>
+              <li><a href="الصفحه الرئيسيه.html">الرئيسية</a></li>
+                <li><a href="القائمه.html">القائمة</a></li>
+                <li><a href="اراء العملاء.html">آراء العملاء</a></li>
+                <li><a href="التواصل.html" class="active">تواصل</a></li>
+                <li><a href="خدمه التوصيل.html">خدمة التوصيل</a></li>
+                <li><a href="تسجيل الدخول.html">تسجيل الدخول</a></li>
+                <li><a href="السله.html">🛒 السلة</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- محتوى السلة -->
+    <section id="cart">
+        <h2>سلة الطلبات </h2>
+        <div class="cart-container" dir="rtl">
+
+        </div>
+
+        <!-- ملخص السلة -->
+        <div class="cart-summary">
+            <p>المجموع الكلي: <strong>0</strong></p>
+            <button class="clear-cart" onclick="clearCart()">🗑️ تفريغ السلة</button> <!-- زر المسح -->
+        </div>
+    </section>
+     <!-- زر العودة للصفحة الرئيسية -->
+    <a href="الصفحه الرئيسيه.html" class="back-home">🏠 العودة للرئيسية</a>
+
+    <!-- الفوتر -->
+    <footer>
+         <p>© 2026 مطعم عرش المذاق - جميع الحقوق محفوظة</p>
+         <p>📍 صنعاء - اليمن | ☎ 777777777</p>
+    </footer>
+   <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let container = document.querySelector(".cart-container");
+    let totalEl = document.querySelector(".cart-summary strong");
+
+    function renderCart() {
+        container.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item, index) => {
+            total += item.price;
+
+            container.innerHTML += `
+                <div class="cart-item">
+                    <img src="${item.image}" class="cart-img">
+                    <div class="cart-details">
+                        <h3>${item.name}</h3>
+                        <span>${item.price} ريال</span>
+                    </div>
+                    <button class="remove-btn" onclick="removeItem(${index})">
+                        حذف ✖
+                    </button>
+                </div>
+            `;
+        });
+
+        totalEl.innerText = total + " ريال";
+    }
+
+    function removeItem(index) {
+        cart.splice(index, 1); // حذف عنصر واحد
+        localStorage.setItem("cart", JSON.stringify(cart));
+        renderCart();
+    }
+
+    renderCart();
+</script>
+
+
+
+</body>
+</html>

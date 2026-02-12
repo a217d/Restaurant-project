@@ -1,0 +1,283 @@
+/* نافذة الترحيب */
+#welcome-popup {
+    position: fixed;/* يستخدم لتثبيت العنصر كطبقة تغطي كامل الصفحة */
+    inset: 0; /* يضبط جميع الحواف (أعلى، يمين، أسفل، يسار) لتكون عند الموضع 0 */ 
+    background: rgba(2,6,23,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-box {
+    background: linear-gradient(145deg, #020617, #111827);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    width: 320px;
+}
+
+.popup-box h2 {
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.popup-box p {
+    margin-bottom: 25px;
+    color: #e5e7eb;
+}
+
+.popup-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(145deg, #d4af37, #b8962e);
+    color: #020617;
+    transition: 0.3s;
+}
+
+.popup-box button:hover {
+    background: #f1c40f;
+}
+
+/* إعدادات عامة */
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    color: #e5e7eb;
+    line-height: 1.8; /* تحسين قابلية القراءة */
+}
+
+/* الهيدر */
+header {
+    background: rgba(2,6,23,0.95);
+    display: flex; /* استخدام flexbox لترتيب العناصر */
+    justify-content: space-between; /* توزيع المساحة بين العناصر */
+    align-items: center;
+    padding: 18px 60px;
+    backdrop-filter: blur(6px); /* تأثير التمويه للخلفية */
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+header .name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* استخدام flexbox لترتيب العناصر أفقياً */
+}
+
+nav ul li {
+    margin-left: 25px; /* مسافة بين العناصر */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-weight: bold;
+    display: inline-block; /* لجعل الأبعاد قابلة للتعديل  في الانميشن*/
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: 3px solid #d4af37;
+}
+ 
+.logo-img {
+     width: 90px;
+    max-width: 25vw;
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(203, 152, 0, 0.84)); /* جعل الصورة باللون الأبيض مع تأثير توهج ذهبي */
+    animation: glow 3s ease-in-out infinite alternate;/* أنيميشن توهج مستمر */
+}
+
+@keyframes glow {
+
+    from {
+        filter: drop-shadow(0 0 6px rgba(212,175,55,0.3));/* تأثير التوهج الذهبي */
+    }
+    to {
+        filter: drop-shadow(0 0 14px rgba(212,175,55,0.6)); /* تأثير التوهج الذهبي الأقوى */
+    }
+ }
+/* قسم الترحيب Hero */
+.hero {
+    height: 620px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+      linear-gradient(rgba(2,6,23,0.65), rgba(2,6,23,0.65)),
+      url("https://images.unsplash.com/photo-1600891964599-f61ba0e24092") center/cover no-repeat;
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+}
+
+
+/* محتوى الترحيب */
+.hero-content {
+    opacity: 0; /* البداية غير مرئية */
+    transform: translateY(30px) scale(0.96); /* تحريك لأسفل وتصغير */
+    filter: blur(6px);/* ضبابية في البداية */
+    animation: heroReveal 3s ease-out forwards;/* تطبيق الأنيميشن */
+}
+
+/* أنيميشن فاخر */
+@keyframes heroReveal {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96); /* يقوم بتصغير حجم العنصر بنسبة 4% */
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+/* نصوص الترحيب */
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+/* الشعار */
+.hero-content p {
+    font-size: 22px;
+    margin: 10px 0 20px 0;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: #d4af37;
+}
+
+/* زر الدعوة لاتخاذ إجراء */
+.btn-menu {
+    background: linear-gradient(145deg, #d4af37, #b8962e);
+    color: #020617;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-menu:hover {
+    transform: scale(1.1);/* تكبير الزر عند التمرير عليه */
+    background: #f1c40f;
+}
+
+ /* المنتجات */
+ #menu {
+    padding: 60px;
+    text-align: center; /* توسيط النصوص */
+}
+
+/* عنوان القسم */
+.menu-container {
+    display: flex; /* استخدام flexbox لترتيب العناصر */
+    justify-content: center; /* توسيط العناصر أفقياً */
+    flex-wrap: wrap; /* السماح بانتقال العناصر إلى السطر التالي عند الحاجة */
+    gap: 25px; /* مسافة بين العناصر */
+}
+
+.menu-item {
+    background: linear-gradient(145deg, #020617, #111827); 
+    width: 260px;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);/* رفع العنصر قليلاً عند التمرير عليه */
+    box-shadow: 0 15px 40px rgba(212,175,55,0.4);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;          /* ارتفاع موحّد لكل الصور */
+    object-fit: cover;      /* قص ذكي مع الحفاظ على التناسق */
+    border-radius: 12px;
+}
+
+
+.menu-item h3 {
+    margin: 15px 0;
+    color: #d4af37;
+}
+
+.menu-item p {
+    color: #e5e7eb;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* السعر*/
+.menu-item h4 {
+    color: #b8962e;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu-item button {
+    background: linear-gradient(145deg, #d4af37, #b8962e); 
+    color: #020617;
+    padding: 10px 15px; /* زيادة الحشو لجعل الزر أكبر */
+    border: none; /* إزالة الحدود الافتراضية */
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer; /* تغيير المؤشر عند التمرير */
+    transition: 0.3s;
+    
+}
+
+.menu-item button:hover {
+    background: #f1c40f;
+    color: #020617;
+}
+/* * زر العودة للرئيسية */
+.Menu {
+    background: linear-gradient(145deg, #d4af37, #b8962e);
+    color: #020617;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(228, 148, 1, 0.5);
+    transition: 2s;
+    margin: 44%;
+   
+}
+
+.Menu:hover {
+    background: #f1c40f;
+    color: #020617;
+}
+
+/* الفوتر */
+
+footer {
+    background: #020617;
+    text-align: center;
+    padding: 15px;
+    color: #d4af37;
+    border-top: 1px solid rgba(212,175,55,0.2);
+}
